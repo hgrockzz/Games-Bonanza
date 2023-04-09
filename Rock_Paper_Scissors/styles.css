@@ -79,10 +79,22 @@ and right also in the respective division tags and it'll work the same.*/
 }
 
 .choice{
-    border: 4px solid white; /*Make a white border*/
-    /* border-radius: 50%; */
+    border: 4px solid white; /* Make a white border */
     margin: 0 20px;
     padding: 10px;
     display: inline-block; /*This'll make it horizontal*/
+    transition: all 0.3s ease; /*For smooth transition*/
 
+}
+.choice:hover{
+    cursor: pointer;
+    background: red;
+}
+
+#action-message{
+    text-align: center;
+    color: white;
+    font-family: Asap, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
 }
