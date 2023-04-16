@@ -1,4 +1,4 @@
-body {
+/* body {
     text-align : center;
     background:  #e5eaf5;
 }
@@ -27,19 +27,12 @@ canvas {
     top: 90%;
     left: 36%;
     transform: translate(-50%, -50%);
-    /* width: 30px;
-    height : 30px;
-    cursor: pointer;
-    position: absolute;
-    top : 465px;
-    left : 15px; */
 }
 #gameover{
     margin-top: inherit;
     position: absolute;
     width : 400px;
     height: 500px;
-    /* top: 10%; */
     left: 34.3%;
     background: rgba(0,0,0,0.5);
     display: none;
@@ -65,4 +58,82 @@ canvas {
     cursor: pointer;
     font-size: 1.25em;
     color : #FFF;
+} */
+body {
+    text-align: center;
+    background: #e5eaf5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+canvas {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+* {
+    font-family: "Germania One";
+}
+
+#sound {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-top: inherit;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#gameover {
+    margin-top: inherit;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#youwon {
+    width: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#youlose {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#restart {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 1.25em;
+    color: #fff;
 }
