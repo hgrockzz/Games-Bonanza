@@ -347,22 +347,3 @@ function showYouLose(){
     gameover.style.display = "block";
     youlose.style.display = "block";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
