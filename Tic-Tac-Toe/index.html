@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Vanilla JS T3</title>
+  </head>
+  <body>
+    <!-- We use the main for representing the dominating content of the document -->
+    <main>
+      <div class="grid">
+        <!-- Turn indicator -->
+        <div class="turn yellow" data-id="turn">
+          <i class="fa-solid fa-x"></i>
+          <p>Player 1, you're up!</p>
+        </div>
+
+        <!-- Dropdown Menu -->
+        <div class="menu" data-id="menu">
+          <button class="menu-btn">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+
+          <div class="items border hidden" data-id="menu-items">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-round-btn">New Round</button>
+          </div>
+        </div>
+
+        <!-- Game Board -->
+        <div id="1" class="square shadow" data-id="square"></div>
+        <div id="2" class="square shadow" data-id="square"></div>
+        <div id="3" class="square shadow" data-id="square"></div>
+        <div id="4" class="square shadow" data-id="square"></div>
+        <div id="5" class="square shadow" data-id="square"></div>
+        <div id="6" class="square shadow" data-id="square"></div>
+        <div id="7" class="square shadow" data-id="square"></div>
+        <div id="8" class="square shadow" data-id="square"></div>
+        <div id="9" class="square shadow" data-id="square"></div>
+
+        <!-- Scoreboard -->
+        <div class="score shadow" style="background-color: var(--turquoise)">
+          <p>Player 1</p>
+          <span>0 Wins</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--light-gray)">
+          <p>Ties</p>
+          <span>0</span>
+        </div>
+        <div class="score shadow" style="background-color: var(--yellow)">
+          <p>Player 2</p>
+          <span>0 Wins</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- <footer>
+      <p>
+        Original project by
+        <a href="https://twitter.com/megfdev">@megfdev</a> and
+        <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a>
+      </p>
+
+      <p>
+        Refactored by
+        <a href="https://twitter.com/zg_dev" style="color: var(--turquoise)"
+          >@zg_dev</a
+        >
+      </p>
+    </footer> -->
+
+    <!-- Modal that opens when game ends -->
+    <div class="modal hidden" data-id="modal">
+      <div class="modal-contents">
+        <p data-id="modal-text">Player 1 wins</p>
+        <button data-id="modal-btn">Play Again</button>
+      </div>
+    </div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

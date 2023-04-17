@@ -56,6 +56,27 @@ document.addEventListener("keyup", function(event){
    }
 });
 
+document.addEventListener("touchstart", function (event) {
+    if (event.targetTouches.length === 1) {
+        touchX = event.targetTouches[0].clientX;
+    }
+});
+
+document.addEventListener("touchmove", function (event) {
+    if (event.targetTouches.length === 1) {
+        let newX = event.targetTouches[0].clientX;
+        let deltaX = newX - touchX;
+        touchX = newX;
+        if (paddle.x + deltaX >= 0 && paddle.x + paddle.width + deltaX <= cvs.width) {
+            paddle.x += deltaX;
+        }
+    }
+});
+
+document.addEventListener("touchend", function (event) {
+    touchX = null;
+});
+
 // move paddle
 function movePaddle(){
     if(rightArrow && paddle.x + paddle.width < cvs.width){
