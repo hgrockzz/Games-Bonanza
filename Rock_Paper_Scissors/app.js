@@ -58,7 +58,7 @@ function win(userChoice, computerChoice){
     // console.log(user)
     // console.log(computer)
     // result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win! "; // CS-5 basically
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}...You win!`; // CS-6 functions
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord}</br> You win!`; // CS-6 functions
     // Addition of class green glow on whichever user clicked.
     userChoice_div.classList.add('green-glow'); 
     // setTimeout(function() {document.getElementById(userChoice).classList.remove('green-glow')}, 300); 
@@ -76,7 +76,7 @@ function lose(userChoice, computerChoice){
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}...You lost!`;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord}</br> You lost!`;
     userChoice_div.classList.add('red-glow'); 
     setTimeout(() => document.getElementById(userChoice).classList.remove('red-glow'), 300);   
 }
@@ -86,7 +86,7 @@ function draw(userChoice, computerChoice){
     const smallUserWord = "(user)".fontsize(3).sub();
     const smallCompWord = "(comp)".fontsize(3).sub();
     const userChoice_div = document.getElementById(userChoice);
-    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord}...It's a draw!`;
+    result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals ${convertToWord(computerChoice)}${smallCompWord}</br> It's a draw!`;
     userChoice_div.classList.add('gray-glow'); 
     setTimeout(() => document.getElementById(userChoice).classList.remove('gray-glow'), 300);
 }
