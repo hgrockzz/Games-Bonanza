@@ -15,6 +15,16 @@ header h1 {
   margin: 0;
 }
 
+.gb{
+  display: inline-block;
+}
+.gb::first-letter{
+  font-size: 50px;
+}
+header > p{
+  font-size: 20px;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -23,12 +33,11 @@ main {
 }
 
 .game {
-  border: 1px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 10px;
+  margin: 20px;
   overflow: hidden;
-  width: 300px;
+  width: 330px;
 }
 
 .game a {
@@ -45,13 +54,17 @@ main {
 }
 
 .game h2 {
-  margin: 10px;
+  margin: 20px;
+}
+
+.game:hover{
+  box-shadow: 0 0 20px rgba(71, 71, 71, 0.5);
 }
 
 footer {
-  position: fixed;
+  /* position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100%; */
   background-color: #333;
   color: #fff;
   padding: 10px;
