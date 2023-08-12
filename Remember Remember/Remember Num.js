@@ -16,6 +16,12 @@ window.onload = () => {
   num_2 = "0";
   document.getElementById("num").innerHTML = num_2;
   document.getElementById("button").addEventListener("click", number);
+  document.getElementById("ans").addEventListener("keydown", function(e) {
+    if (e.key === "Enter"){
+        e.preventDefault();
+        document.getElementById('button').click();
+    }   
+  });
   document.getElementById("ready").addEventListener("click", hidenum);
 
   document.getElementById("ans").disabled = true;
